@@ -8,10 +8,10 @@
 var reduce = function(nums, fn, init) {
 
     if(!nums.length) return init
-       var val= fn(init,nums[0]) 
-
-        for(let i=1;i<nums.length;i++){
-       val = fn(val,nums[i]) 
+       let result= init
+  
+    for (let num of nums){
+       result = fn(result,num) 
     }
-    return val
+    return result
 };
